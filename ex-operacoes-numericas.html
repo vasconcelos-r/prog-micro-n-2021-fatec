@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informe seus Dados</title>
+</head>
+<body>
+    <h1>Operações Numericas</h1>
+    <p>Informe dois numeros para serem realizados as operações aritméticas básicas</p>
+
+
+    <script>
+        let n1 = prompt ('informe um numero')
+        let n2 = prompt ('informe outro numero')
+
+        let plus = parseFloat(n1) + parseFloat(n2)
+        let min = parseFloat(n1) - parseFloat(n2)
+        let mult = parseFloat(n1) * parseFloat(n2)
+        let divi = parseFloat(n1) / parseFloat(n2)
+
+
+        document.write(`Os reultados dos numeros ${n1} e ${n2} são:
+        <ul>
+            <li> Adição : <b> ${ plus } </b></li>
+            <li> Subtração : <b> ${min } </b></li>
+            <li> Multiplicação : <b> ${mult } </b></li>
+            <li> Divisão : <b> ${divi } </b></li>
+        </ul>
+         `)
+    </script>
+</body>
+</html>

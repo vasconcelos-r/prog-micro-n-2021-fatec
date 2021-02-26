@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Bhaskara</h1>
+    <p>Informe valores para A, B e C para se reolver a equção de 2° grau:</p>
+
+
+    <script>
+        let a = prompt ('Digite um valor para A')
+        let b = prompt ('Digite um valor para B')
+        let c = prompt ('Digite um valor para C')
+
+        let delta = Math.pow(b, 2) - (4 * a * c)        //.pow é para expoente, (a base elevada ao expoente) 
+
+        let x1 = (-b - Math.sqrt(delta)) / (2 * a)      //.sqrt retorna a raiz quadrada de um número
+        let x2 = (-b + Math.sqrt(delta)) / (2 * a)
+
+        document.write (`O reultado da equação é de: <b> ${delta}</b>  
+        <ul>
+                <li>A solução de x1 é <b> ${x1} </b></li>
+                <li>A solução de x2 é <b> ${x2} </b></li>
+            </ul>
+        `)
+    </script>
+
+    
+</body>
+</html>
