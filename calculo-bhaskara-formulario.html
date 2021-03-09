@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1>Bhaskara com formulario</h1>
+    <p>Informe valores para A, B e C para se reolver a equção de 2° grau:</p>
+
+    <form id="form">
+        <input id="n1" type="number" placeholder="Informe um valor para A">
+        <input id="n2" type="number" placeholder="Informe um valor para B">
+        <input id="n3" type="number" placeholder="Informe um valor para C">
+        <button>Calcular</button>
+    </form>
+
+    <div id="result"></div>
+
+    <script>
+        function onSubmit(event) {
+            event.preventDefault()
+
+            let a = parseFloat(n1.value)
+            let b = parseFloat(n2.value)
+            let c = parseFloat(n3.value)
+
+            let delta = Math.pow(b, 2) - (4 * a * c)        //.pow é para expoente, (a base elevada ao expoente) 
+
+            let x1 = (-b - Math.sqrt(delta)) / (2 * a)      //.sqrt retorna a raiz quadrada de um número
+            let x2 = (-b + Math.sqrt(delta)) / (2 * a)
+
+            result.innerHTML = `
+        <ul>
+                <li> O reultado de delta é de: <b> ${delta}</b></li>  
+                <li>A solução de x1 é <b> ${x1} </b></li>
+                <li>A solução de x2 é <b> ${x2} </b></li>
+            </ul>
+        `
+        }
+        form.addEventListener('submit', onSubmit)
+    </script>
+
+
+
+</body>
+
+</html>

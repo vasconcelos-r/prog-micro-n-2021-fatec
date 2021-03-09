@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informe seus Dados</title>
+</head>
+
+<body>
+    <h1>Operações Numericas com formulario</h1>
+    <p>Informe dois numeros para serem realizados as operações aritméticas básicas</p>
+
+    <form id="form">
+        <input id="n1" type="number" placeholder="Informe o primeiro numero">
+        <input id="n2" type="number" placeholder="Informe o segundo numero">
+        <button>Calcular</button>
+    </form>
+    <div id="result"></div>
+
+
+    <script>
+        function onSubmit(event) {
+            event.preventDefault()
+
+            let valor1 = parseFloat(n1.value)
+            let valor2 = parseFloat(n2.value)
+
+
+            let plus = parseFloat(n1.value) + parseFloat(n2.value)
+            let min = parseFloat(n1.value) - parseFloat(n2.value)
+            let mult = parseFloat(n1.value) * parseFloat(n2.value)
+            let divi = parseFloat(n1.value) / parseFloat(n2.value)
+
+
+            result.innerHTML = `
+        <ul>
+            <li>Os reultados dos numeros ${valor1} e ${valor2} são:</li>
+            <li> Adição : <b> ${plus} </b></li>
+            <li> Subtração : <b> ${min} </b></li>
+            <li> Multiplicação : <b> ${mult} </b></li>
+            <li> Divisão : <b> ${divi} </b></li>
+        </ul>
+        `
+        }
+        form.addEventListener('submit', onSubmit)
+
+    </script>
+</body>
+</html>
