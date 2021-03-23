@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <form id="form">
+        <input id="num" type="number" placeholder="Digite um numero">
+        <button>Calcular</button>
+    </form>
+
+    <div id="resultado"></div>
+
+
+<script>
+    function main(event){
+        event.preventDefault()
+
+        let n1 = parseFloat (num.value)
+
+        resultado.innerHTML =""
+
+        if (isNaN(n1)){
+            resultado.innerHTML = '<p style="color:red">Digite um numero!</p>'
+        } else {
+            for (let i = 0; i<=10; i++){
+                let multi = n1 * i
+                resultado.innerHTML +=`<li>${n1} x ${i} = ${multi}</li>`
+            }            
+            }
+        }
+
+    form.addEventListener('submit', main)
+</script>
+</body>
+
+</html>
